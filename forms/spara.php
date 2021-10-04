@@ -10,6 +10,6 @@ $mobil = $_POST["mobil"];
 if ($namn == "Isam") {
     echo "<p>Hej! Vad trevligt att du är tillbaka!</p>";
 } else {
-    echo "<p>Hej.. YOU CAME IN THE WRONG HOUSE FOOOLL!!</p>";
+    echo "<p>Hej... YOU CAME IN THE WRONG HOUSE FOOOLL!!</p>";
 }
 ?>
