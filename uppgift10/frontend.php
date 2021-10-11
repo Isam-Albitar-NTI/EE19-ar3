@@ -31,6 +31,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <script src="switch.js"></script>
 </body>
 
 </html>
