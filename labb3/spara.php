@@ -47,7 +47,7 @@
             // Bekräftelse
             echo "<p class=\"alert alert-success\">Meddelandet har sparats!</p>";
         } else {
-            echo "<p class=\"alert alert-warning\">Error 99!</p>";
+            echo "<p class=\"alert alert-warning\">Bruttolön måste vara 10000 kr och 45000 kr.</p>";
         }
         ?>
     </div>

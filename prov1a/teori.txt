@@ -1,0 +1,2 @@
+1. En exempel på webbstjänster är den kändaste, WordPress. WordPress använder PHP för att bygga sidan och konstant uppdatera sidorna man skapar.
+2. För en webbapplikation byggd på PHP ska fungera behöver man använda "method POST" som skickar data till backend och en "form action" som visar var datan ska skiskas till, alltså en php fil med specifik namn.
