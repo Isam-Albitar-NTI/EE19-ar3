@@ -131,32 +131,6 @@ nav ul li a{
     }
 }
 
-div{
-    background-color: rgb(185, 168, 151);
-    margin: 5% 10% 7% 30%;
-    height: 420px;
-    width: 650px;
-}
-
-div h2{
-    text-align: center;
-    margin-bottom: 4%;
-    font-size: 50px;
-}
-
-div h3{
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-}
-
-div img{
-    width: 400px;
-    padding-left: 200px;
-    margin-left: 5%;
-    
-}
-
 footer{
     background-color: grey;
     height: 50px;
@@ -164,9 +138,51 @@ footer{
     text-align: center;
     font-size: 30px;
 }
-@media (max-width: 900px){
-    div{
-        height: 400px;
-        width: 350px;
-    }
+
+.img-menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 60px 0 0 30px;
+    background-color: #AE2A2A;
+    margin: 100px;
+    height: 600px;
+    align-items: center;
+    padding: 10px;
+}
+
+.img2{
+    width: 230px;
+}
+.img3{
+    width: 290px;
+    height: 220px;
+}
+.img4{
+    width: 230px;
+    height: 250px;
+}
+.img5{
+    width: 230px;
+}
+.img6{
+    width: 230px;
+}
+.img7{
+    width: 300px;
+    height: 200px;
+}
+.img8{
+    width: 280px;
+    height: 230px;
+}
+
+
+
+h3{
+    margin-right: 15px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
 }
