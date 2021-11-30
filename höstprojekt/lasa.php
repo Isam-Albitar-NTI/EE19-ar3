@@ -10,8 +10,20 @@
 </head>
 
 <body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Film Recension</label>
+        <ul>
+            <li><a class="aktiv" href="index.html">Hem</a></li>
+            <li><a href="">Filmer</a></li>
+            <li><a href="form.php">Recension</a></li>
+        </ul>
+    </nav>
     <div class="kontainer">
-        <h1 class="display-4">Gästboken</h1>
+        <h1 class="display-4">Recension</h1>
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="form.php">Skriva</a>
@@ -22,7 +34,7 @@
         </ul>
         <?php
         // Filnamnet 
-        $filnamn = "gästbok.txt";
+        $filnamn = "recension.txt";
 
         // Läsa in all text
         $texten = file_get_contents($filnamn);

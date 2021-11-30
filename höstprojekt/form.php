@@ -10,8 +10,20 @@
 </head>
 
 <body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Film Recension</label>
+        <ul>
+            <li><a class="aktiv" href="index.html">Hem</a></li>
+            <li><a href="">Filmer</a></li>
+            <li><a href="form.php">Recension</a></li>
+        </ul>
+    </nav>
     <div class="kontainer">
-        <h1 class="display-4">Gästboken</h1>
+        <h1 class="display-4">Recension</h1>
         <ul class="nav nav-pills">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="gastbok.php">Skriva</a>
@@ -21,35 +33,36 @@
             </li>
         </ul>
         <form class="kol2" action="form.php" method="POST">
-            <label>Rubrik</label>
-            <input type="text" name="rubrik" required>
-            <label>Ange meddelande</label>
-            <textarea name="meddelande" required></textarea>
-            <label>Ange ditt namn</label>
-            <input type="text" name="namn" required>
+            <label>Film</label>
+            <input type="text" name="film" required>
+            <label>Skriv din recension</label>
+            <textarea name="recension" required></textarea>
+            <label>Ange Betyg (0-10)</label>
+            <input type="text" name="betyg" required>
 
             <button class="primary">Skicka</button>
         </form>
         <?php
         // Ta emot data som skickas
-        $rubrik = filter_input(INPUT_POST, 'rubrik', FILTER_SANITIZE_STRING);
-        $meddelande = filter_input(INPUT_POST, 'meddelande', FILTER_SANITIZE_STRING);
-        $namn = filter_input(INPUT_POST, 'namn', FILTER_SANITIZE_STRING);
+        $film = filter_input(INPUT_POST, 'film', FILTER_SANITIZE_STRING);
+        $recension = filter_input(INPUT_POST, 'recension', FILTER_SANITIZE_STRING);
+        $betyg = filter_input(INPUT_POST, 'betyg', FILTER_SANITIZE_STRING);
 
         // Finns data?
-        if ($rubrik && $meddelande && $namn) {
+        if ($film && $recension && $betyg) {
 
             // Filnamnet 
-            $filnamn = "gästbok.txt";
+            $filnamn = "recension.txt";
             setlocale(LC_ALL, "sv_SE.utf8");
             $dagensDatum = date("F j, Y, H:i:s");
             // Texten att spara
             
-            $texten = "<h3>$rubrik<br>";
+            $texten = "<h3>$film | ";
+            $texten .= "$betyg<br>";
             $texten .= "$dagensDatum</h3>";
-            $texten .= "<p>$meddelande</p>";
-            $texten .= "<p>$namn</p>";
-
+            $texten .= "<h4>$recension</h4>";
+            
+            
             // Spara i textfil
             file_put_contents($filnamn, $texten, FILE_APPEND);
 
