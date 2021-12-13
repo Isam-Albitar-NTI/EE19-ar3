@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cornflowerblue;
+    color: white;
+  }
+  
+  h2 {
+    margin-top: 2rem;
+  }
+  
+  p {
+    max-width: 60ch;
+    line-height: 1.5;
+  }
+  
+  * + p {
+    margin-top: 1rem;
+  }
+  
+  a {
+    color: white;
+  }
+  
+  header {
+    background-color: #333;
+  }
+  
+  header a {
+    line-height: 2.5rem;
+    display: inline-block;
+    margin-left: 0;
+    text-decoration: none;
+    padding: 0 0.5rem;
+  }
+  
+  header a[data-current] {
+    background-color: cornflowerblue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    pointer-events: none;
+  }
+  
+  header a:hover {
+    color: tomato;
+  }
+  
+  #app-root {
+    margin: 5rem auto;
+    max-width: 60ch;
+  }
+  
+  main {
+    margin: 1.5rem;
+  }
+  
+  ul {
+    margin: 1.5rem 2rem;
+  }
+  
+  li {
+    line-height: 2rem;
+    list-style: circle;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  li:hover {
+    font-weight: bolder;
+    text-decoration: line-through 2px;
+  }
+  
+  input[type="text"] {
+    margin: 1.5rem 0;
+    outline: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+  }
+  
+  input[type="text"]:focus {
+    border-bottom-width: 3px;
+  }
+  
+  button {
+    background: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  button:hover,
+  button:focus {
+    font-weight: bolder;
+    outline: none;
+  }
+  
+  .tag-list {
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 60ch;
+  }
+  
+  .tag-list a {
+    font-family: monospace;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    line-height: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    color: #333;
+    transition: background-color 150ms;
+  }
+  
+  .tag-list a:hover {
+    background-color: tomato;
+    color: white;
+  }
+  
+  @media (min-width: 600px) {
+    header a {
+      line-height: 2.5rem;
+      display: inline-block;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      padding: 0 1.5rem;
+    }
+  
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+    }
+  }

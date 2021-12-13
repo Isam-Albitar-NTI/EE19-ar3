@@ -4,26 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inloggning</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer">
         <h1 class="display-4">Madlibs</h1>
-        <form class="kol2" action="madlib.php" method="POST">
-        <label>Namn</label>
-        <input type="text" name="namn" required>
-        <label>Adjektiv #1</label>
-        <input type="text" name="adjektiv1" required>
-        <label>Adjektiv #2</label>
-        <input type="text" name="adjektiv2" required>
-        <label>Adjektiv #3</label>
-        <input type="text" name="adjektiv3" required>
-        <label>Substantiv</label>
-        <input type="text" name="substantiv" required>
-        <label>Verb</label>
-        <input type="text" name="verb" required>
-        <button class="primary">Skicka</button>
+        <form class="kol2" action="./madlib.php" method="POST">
+
+            <label>Enter adjective</label>
+            <input type="text" name="adjective" required>
+
+            <label>Enter verb ending in "ing"</label>
+            <input type="text" name="verbIng" required>
+
+            <label>Type of food</label>
+            <input type="text" name="food" required>
+
+            <label>Noun</label>
+            <input type="text" name="noun" required>
+
+            <label>Number</label>
+            <input type="text" name="number" required>
+
+            <label>Part of the body (plural)</label>
+            <input type="text" name="bodyPart" required>
+
+            <button class="primary">Skicka</button>
         </form>
     </div>
 </body>

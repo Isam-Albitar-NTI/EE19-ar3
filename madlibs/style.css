@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 
 /* Enkel CSS-reset */
 html {
@@ -13,7 +14,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 body {
-    background: #F9F6EB;
+    background: url(./jirasin-yossri-nLBw1ZMyPQg-unsplash\ \(1\).jpg);
+    font-family: 'Chewy', cursive;
 }
 .kontainer {
     width: 600px;
@@ -21,7 +23,6 @@ body {
     margin: 3em auto;
     background: #fff;
     border-radius: 5px;
-    font-family: 'Source Sans Pro', sans-serif;
     border: 1px solid #ddd;
     box-shadow: 0 0 12px #f0e9d1;
     color: #4e4e4e;
