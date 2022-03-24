@@ -1,12 +1,26 @@
-.kontainer{
-    width: 800px;
-    padding: 1em;
-    margin: 1em auto;
+body{
     background: #e0e0e0;
 }
 
-.form{
+h1{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.kontainer{
+    width: 800px;
+    padding: 2em;
+    margin: 2em auto;
+    background: #fff;
+}
+
+form{
     margin: 2em;
     padding: 2em;
-    background: #d6d6d6d6;
+    background: #e0e0e0;
+    border-radius: 1em;
+}
+
+.nav-link.active{
+    background: #e0e0e0;
 }
