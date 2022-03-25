@@ -1,6 +1,10 @@
 <?php
 include "konfigdb.php";
 session_start();
+// Om det inte finns en session betyder det att man inte är inloggad
+if (!isset($_SESSION['inloggad'])) {
+    $_SESSION['inloggad'] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,24 +28,24 @@ session_start();
         <h1>Bloggen</h1>
         <nav>
         <ul class="nav">
-            <?php
-            if ($_SESSION['inloggad'] == false) {
-            ?>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./logga-in.php">Logga in</a>
-                </li>
                 <?php
-                }
+                if ($_SESSION['inloggad'] == false) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./logga-in.php">Logga in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./registrera.php">Registrera</a>
+                    </li>
+                <?php
+                } else {
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link active" href="./registrera.php">Registrera</a>
+                    <a class="nav-link" href="./admin.php">Admin</a>
                 </li>
-                <?php
-                if ($_SESSION['inloggad'] == true) {
-                ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./logout.php">Logga ut</a>
-                </li>
+                        <a class="nav-link" href="./logout.php">Logga ut</a>
+                    </li>
                 <?php
                 }
                 ?>

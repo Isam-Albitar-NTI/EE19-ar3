@@ -21,7 +21,7 @@ if (!isset($_SESSION['inloggad'])) {
     <div class="kontainer">
         <h1>Bloggen</h1>
         <nav>
-        <ul class="nav">
+            <ul class="nav">
                 <?php
                 if ($_SESSION['inloggad'] == false) {
                 ?>
@@ -35,21 +35,18 @@ if (!isset($_SESSION['inloggad'])) {
                 } else {
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin.php">Admin</a>
+                    <a class="nav-link active" href="./admin.php">Admin</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link active" href="./logout.php">Logga ut</a>
+                        <a class="nav-link" href="./logout.php">Logga ut</a>
                     </li>
                 <?php
                 }
                 ?>
             </ul>
-        </nav>
-        <main>
-            <?php
-            $_SESSION['inloggad'] = false;
-            ?>
-        </main>
+            <main>
+                <h3>Admin</h3>
+            </main>
     </div>
 </body>
 

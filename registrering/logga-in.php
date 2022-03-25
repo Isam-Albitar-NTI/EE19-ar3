@@ -1,6 +1,9 @@
 <?php
 include "konfigdb.php";
 session_start();
+if (!isset($_SESSION['inloggad'])) {
+    $_SESSION['inloggad'] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,25 +21,25 @@ session_start();
     <div class="kontainer">
         <h1>Bloggen</h1>
         <nav>
-            <ul class="nav">
-            <?php
-            if ($_SESSION['inloggad'] == false) {
-            ?>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./logga-in.php">Logga in</a>
-                </li>
+        <ul class="nav">
                 <?php
-                }
+                if ($_SESSION['inloggad'] == false) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./logga-in.php">Logga in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./registrera.php">Registrera</a>
+                    </li>
+                <?php
+                } else {
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./registrera.php">Registrera</a>
+                    <a class="nav-link" href="./admin.php">Admin</a>
                 </li>
-                <?php
-                if ($_SESSION['inloggad'] == true) {
-                ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="./logout.php">Logga ut</a>
-                </li>
+                        <a class="nav-link" href="./logout.php">Logga ut</a>
+                    </li>
                 <?php
                 }
                 ?>
@@ -88,6 +91,8 @@ session_start();
 
                 if (password_verify($lösen, $rad['hash'])) {
                     echo "<p class=\"alert alert-success\">Du är inloggad!</p>";
+
+                    header("location: admin.php");
                     
                     // Kom ihåg att vi lyckats logga in!
                     $_SESSION['inloggad'] = true;
