@@ -3,6 +3,10 @@ include "konfigdb.php";
 session_start();
 if (!isset($_SESSION['inloggad'])) {
     $_SESSION['inloggad'] = false;
+
+    // Ajabaja! Skickas direkt till login.php
+    header("Location: logga-in.php");
+    
 }
 ?>
 
@@ -48,6 +52,10 @@ if (!isset($_SESSION['inloggad'])) {
         <main>
             <?php
             $_SESSION['inloggad'] = false;
+            echo "<p class=\"alert alert-warning\">Du är utloggad!</p>";
+
+            // Nu är användaren utloggad, skickas till inloggningssidan
+            header("Location: logga-in.php");
             ?>
         </main>
     </div>
