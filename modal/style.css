@@ -1,0 +1,9 @@
+.container {
+    background: #f2f2f2;
+    padding: 3em;
+    width: 700px;
+}
+
+#status {
+    margin: 3em 0;
+}
