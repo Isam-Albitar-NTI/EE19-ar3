@@ -12,11 +12,18 @@
 // Skapa en första klass (mall)
 class User {
 
-    // Egenskaper 
-    public $username = "Isam";
-    public $email = "isam.albitar03@gmail.com";
+    // Egenskaper = variabler
+    public $username = "";
+    public $email = "";
 
-    // Metoder
+    // Konstruktor
+    public function __construct($username, $email)
+    {
+        $this->username = $username;
+        $this->email = $email;
+    }
+
+    // Metoder = funktioner
     public function addFriend ()
     { 
         return " added a new friend";
@@ -25,11 +32,13 @@ class User {
 }
 // Skapa ett första objekt från klassen User
 // New skapar en instans (objekt) = $userOne
-$userOne = new User();
+$userOne = new User("isam", "isam.albitar03@gmail.com");
 
 // Skapa ett andra objekt från klassen User
 
-$userTwo = new user();
+$userTwo = new user("luciano", "luciano.cucarano@elev.ga.ntig.se");
+
+
 
 echo '<p>$userOne är av klassen ' . get_class($userOne) . '</p>';
 echo '<p>$userTwo är av klassen ' . get_class($userTwo) . '</p>';
