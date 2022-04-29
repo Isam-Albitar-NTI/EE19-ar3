@@ -1,0 +1,16 @@
+body {
+    background: bisque;
+}
+
+.kontainer {
+    width: 700px;
+    margin: auto;
+    padding: 1em;
+    background: #FFF;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
